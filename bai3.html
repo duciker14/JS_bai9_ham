@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polinom</title>
+</head>
+<body>
+    <script>
+        //Polinom
+		function polinom() {
+            var m,rv,temp,mod;
+		
+            m = parseInt(prompt("Nhập vào số cần kiểm tra = "))
+            
+            temp = m; rv = 0;
+            
+            while (m > 0) {
+                mod = m % 10;
+                m = Math.round (m / 10);
+                rv = rv * 10 + mod;
+            }
+            
+            if (rv == temp) {
+                document.write("Số "+ temp + " là số Polinom"); 
+            } else {
+                document.write("Số "+ temp + " không phải là số Polinom"); 
+            }
+        }
+        polinom();
+    </script>
+</body>
+</html>
